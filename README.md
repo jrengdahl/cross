@@ -1,12 +1,12 @@
 ## Introduction
 
-This project contains .config files to build OpenMP-enabled bare-metal GCC compilers for:
+This project contains .config files to build OpenMP-enabled bare-metal GCC compilers:
 
 * aarch64/.config      ARMv8 (64-bit Cortex-A53, A72, etc.)      built for Cortex-A54
 * multi/.config        ARMv7 (32-bit Cortex-A9, Cortex-M7, etc.) multi-lib
 
 Normally bare metal compilers do not have OpenMP support, since it is assumed that considerable
-operating system suport is required to make OpemMP work. However, it is actually not that difficult
+operating system support is required to make OpemMP work. However, it is actually not that difficult
 to get a subset of OpemMP working on a multi-core bare metal system.
 
 To build a bare-metal OpenMP-enabled toolchain you first need a couple simple mods to ct-ng which
@@ -16,13 +16,12 @@ https://crosstool-ng.github.io/docs to build and install ct-ng.
 
 ## Cygwin issues
 
-I build these toolchains on a Windows 10 PC using Cygwin. Following the ct-ng instruction,
-I enable case-sensitive filenames on the build machine.
+I build these toolchains on a Windows 10 PC using Cygwin. Following the ct-ng instructions,
+I enabled case-sensitive filenames on the build machine.
 
 I want the toolchains to be useable in both
 Cygwin and non-Cygwin environments. In order to do this I need to copy two of the Cygwin DLLs
-into the toolchain's bin directory, and move or copy two directories. I don't entirely understand
-why
+into the toolchain's bin directory, and move or copy two directories (see the file SetupOpenMP.txt).
 
 If you run the toolchains in a Cygwin environment it is necessary that the version of the DLLs in
 the toolchain bin directory match the Cygwin version. I recommend that you update your Cygwin,
