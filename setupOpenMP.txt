@@ -1,17 +1,17 @@
 After building GCC using ct-ng:
 
-Fix security settings on install directory so that changes can be made. 
+Fix Windows security settings on install directory and child objects so that changes can be made. 
 
 Copy cygwin1.dll and cyggcc_s-seh-1.dll to ./bin.
 
-Copy omp.h to ./lib/gcc/arm-multi-eabi/11.2.0/include (update path as needed).
+Copy omp.h from another toolchain to ./lib/gcc/arm-openmp-eabi/11.2.0/include (update path as needed).
 
-Delete empty ./include
+Delete empty ./include.
 
-Create ./usr
+Create ./usr.
 
 Move ./libexec to ./usr.
 
-Copy ./arm-multi-eabi to ./usr.
+Copy ./arm-openmp-eabi to ./usr.
 
-
+Copy a gdb.exe from another toolchain and adjust its triplet prefix as needed.
