@@ -1,0 +1,6 @@
+.config.old
+include/
+.build/
+.config.new
+*.log
+arm-openmp-eabi/
