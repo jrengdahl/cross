@@ -3,4 +3,6 @@ include/
 .build/
 .config.new
 *.log
-arm-openmp-eabi/
+aarch64-openmp-elf/
+arm-cortexm7-eabi/
+arm-uboot-eabi/
