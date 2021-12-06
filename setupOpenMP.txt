@@ -1,17 +1,34 @@
-After building GCC using ct-ng:
+For Cygwin:
 
-Fix Windows security settings on install directory and child objects so that changes can be made. 
+(1) In order to use the Windows 10 toolchain in a non-Cygwin environment
+(such as Eclipse), do the following after building GCC using ct-ng:
 
-Copy cygwin1.dll and cyggcc_s-seh-1.dll to ./bin.
+(2) Copy cygwin1.dll and cyggcc_s-seh-1.dll from C:/cygwin64/bin to the
+toolchain's bin directory. If you update your Cygwin you may need to
+repeat this step. Cygwin will be unhappy if the DLL versions do not match.
 
-Copy omp.h from another toolchain to ./lib/gcc/arm-openmp-eabi/11.2.0/include (update path as needed).
+(3) Copy omp.h from another toolchain to  the toolchain's
+lib/gcc/aarch64-openmp-elf/11.2.0/include directory.
 
-Delete empty ./include.
+(4) Create <toolchain>/usr.
 
-Create ./usr.
+(5) Move <toolchain>/libexec to <toolchain>/usr.
 
-Move ./libexec to ./usr.
+(6) Copy <toolchain>/aarch64-openmp-elf to <toolchain>/usr.
 
-Copy ./arm-openmp-eabi to ./usr.
+(7) If you need to install this GCC as an Eclipse toolchain, copy gdb.exe
+from another toolchain to <toolchain>/bin and adjust its triplet prefix
+as needed. My crosstool-ng .config files do not build gdb since I was
+getting build errors. However, the Eclipse toolchain importer requires
+gbd to be present, even if you don't use it. I have not tested whether
+a copied gdb works, since I use Segger's Ozone debugger instead.
 
-Copy a gdb.exe from another toolchain and adjust its triplet prefix as needed.
+In the above instructions, adjust the path and filenames as needed, for
+example, substitute arm-uboot-eabi for aarch64-openmp-elf.
+
+
+For Linux:
+
+Only do step 3, and perhaps step 7 if you need to import the
+toolchain into Eclipse. I have not tested the need for step 7 on a Linux
+system.
