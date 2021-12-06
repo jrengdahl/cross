@@ -146,6 +146,6 @@ Cortex-M7 projects.
 
 
 ##Releases:
-- v0.0    First experimenetal release.
+- v0.0    First experimental release.
 - v0.0.1  Fixed packaging issue for Windows binaries.
 
