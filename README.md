@@ -18,10 +18,13 @@ To build a bare-metal OpenMP-enabled toolchain you first need a couple
 mods to crosstool-ng which are contained in the project at
 https://github.com/jrengdahl/crosstool-ng-openmp. After downloading
 my modified version of crosstool-ng, follow the instructions at
-https://crosstool-ng.github.io/docs to build and install ct-ng.
+https://crosstool-ng.github.io/docs to build and install ct-ng. You can
+then use the modified ct-ng and the .config files in this project to
+build several GCC toolchains.
 
 The Windows 10 cross-compilers are built from a Cygwin64 bash shell.
-The Linux versions are built using Debian running under Windows Subsystem for Linux (WSL).
+The Linux versions are built using Debian running under Windows Subsystem
+for Linux (WSL). These should work equally well under any real Linux system.
 
 ## Cygwin issues
 
