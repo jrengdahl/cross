@@ -13,3 +13,6 @@ include/
 /old/
 /utilities-1.0/
 /old2/
+/aarch64-openmp-elf.7z
+/arm-cortexm7-eabi.7z
+/arm-uboot-eabi.7z
