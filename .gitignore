@@ -17,3 +17,7 @@ include/
 /aarch64-openmp-elf.7z
 /arm-cortexm7-eabi.7z
 /arm-uboot-eabi.7z
+/arm-cortexm33-eabi
+/arm-cortexm4-eabi
+/foo.cpp
+/test.cpp
