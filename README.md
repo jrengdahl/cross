@@ -3,11 +3,13 @@
 This project contains crosstool-ng .config files to build OpenMP-enabled
 bare-metal GCC cross-compilers:
 
-- aarch64-cygwin       --  ARMv8 for Windows 10
+- aarch64-cygwin       -- ARMv8 for Windows 10
 - aarch64-linux        -- ARMv8 for Linux
 - arm-cortexm7-cygwin  -- ARMv7 Cortex-M7 for Windows 10
 - arm-cortexm7-linux   -- ARMv7 Cortex-M7 for Linux
-- arm-uboot-linux -- ARMv7 Cortex-A9 with NEON (i.MX6Q) with aapcs-linux
+- arm-uboot-linux      -- ARMv7 Cortex-A9 with NEON (i.MX6Q) with aapcs-linux
+- arm-cortexm0p-cygwin -- ARMv7 Cortex-m0+
+- arm-cortexm33-cygwin -- ARMv7 Cortex-m33
 
 Normally bare metal compilers do not have OpenMP support, since it is
 assumed that considerable operating system support is required to make
@@ -148,4 +150,6 @@ Cortex-M7 projects.
 ##Releases:
 - v0.0    First experimental release.
 - v0.0.1  Fixed packaging issue for Windows binaries.
+- v1.0    Oops, haven.t quite figured out tagging yet.
+- v1.1    Add Cortex-M33, release GCC 12.2 for Cortex-m33.
 
