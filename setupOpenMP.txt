@@ -30,5 +30,4 @@ example, substitute arm-uboot-eabi for aarch64-openmp-elf.
 For Linux:
 
 Only do step 2, and perhaps step 6 if you need to import the
-toolchain into Eclipse. I have not tested the need for step 7 on a Linux
-system.
+toolchain into Eclipse.

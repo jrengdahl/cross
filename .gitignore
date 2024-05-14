@@ -10,6 +10,8 @@
 /arm-none-eabi-11.3.rel1
 /arm-none-eabi-12.2.rel1
 /arm-uboot-eabi/
+/arm-cortexm33-eabi-12.2/
+/arm-cortexm7-eabi-12.2/
 
 .config.old
 include/
