@@ -26,3 +26,6 @@ include/
 *.tar.bz2
 *.tar
 /test.cpp
+/arm-cortexm7-eabi.old
+/cyggcc_s-seh-1.dll
+/cygwin1.dll

@@ -3,13 +3,11 @@
 This project contains crosstool-ng .config files to build OpenMP-enabled
 bare-metal GCC cross-compilers:
 
-- aarch64-cygwin       -- ARMv8 for Windows 10
-- aarch64-linux        -- ARMv8 for Linux
-- arm-cortexm7-cygwin  -- ARMv7 Cortex-M7 for Windows 10
-- arm-cortexm7-linux   -- ARMv7 Cortex-M7 for Linux
-- arm-uboot-linux      -- ARMv7 Cortex-A9 with NEON (i.MX6Q) with aapcs-linux
-- arm-cortexm0p-cygwin -- ARMv7 Cortex-m0+
-- arm-cortexm33-cygwin -- ARMv7 Cortex-m33
+- aarch64       -- ARMv8
+- arm-cortexm7  -- ARMv7 Cortex-M7
+- arm-uboot     -- ARMv7 Cortex-A9 with NEON (i.MX6Q) with aapcs-linux
+- arm-cortexm0p -- ARMv7 Cortex-m0+
+- arm-cortexm33 -- ARMv7 Cortex-m33
 
 Normally bare metal compilers do not have OpenMP support, since it is
 assumed that considerable operating system support is required to make
@@ -22,21 +20,29 @@ https://github.com/jrengdahl/crosstool-ng-openmp. After downloading
 my modified version of crosstool-ng, follow the instructions at
 https://crosstool-ng.github.io/docs to build and install ct-ng. You can
 then use the modified ct-ng and the .config files in this project to
-build several GCC toolchains.
+build the GCC toolchains.
 
-The Windows 10 cross-compilers are built from a Cygwin64 bash shell.
+Windows cross-compilers are built from a Cygwin64 bash shell.
 The Linux versions are built using Debian running under Windows Subsystem
 for Linux (WSL). These should work equally well under any real Linux system.
 
 ## Cygwin issues
 
-I built the Windows toolchains on a Windows 10 PC using Cygwin. Following the ct-ng instructions,
-I enabled case-sensitive filenames on the build machine.
+I built the Windows toolchains on a Windows PC using Cygwin. Following the ct-ng instructions,
+You need to enabled case-sensitive filenames in the C:/cross subdirectory. See
+https://learn.microsoft.com/en-us/windows/wsl/case-sensitivity. So I don't have
+to remember the command I created setcase.bat which contains the command:
+"fsutil file setCaseSensitiveInfo %1 enable". Remember that this only
+works if the directory is empty when the command is run.
 
 I want the toolchains to be useable in both Cygwin and non-Cygwin
 environments. In order to do this, I need to copy two of the Cygwin DLLs
 into the toolchain's bin directory, and move or copy two directories.
 See the file SetupOpenMP.txt for detailed instructions.
+
+More recently (early 2024) this stunt does not seem to work any more. I had better luck
+with creating a subdirectory arm-cortexm7-eabi/cygwin64/bin, copying ALL the Cygwin
+DLLs there, then puttingf that directory on the Eclipse PATH.
 
 If you run the toolchains in a Cygwin environment it is necessary that
 the versions of the DLLs in the toolchain bin directory match the installed Cygwin
@@ -152,4 +158,4 @@ Cortex-M7 projects.
 - v0.0.1  Fixed packaging issue for Windows binaries.
 - v1.0    Oops, haven.t quite figured out tagging yet.
 - v1.1    Add Cortex-M33, release GCC 12.2 for Cortex-m33.
-
+- v1.2    Update Cortex-M33 and Cortex-M7 to GCC 13.2.
