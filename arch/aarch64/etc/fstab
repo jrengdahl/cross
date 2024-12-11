@@ -1,0 +1,14 @@
+# /etc/fstab
+#
+#    This file is read once by the first process in a Cygwin process tree.
+#    To pick up changes, restart all Cygwin processes.  For a description
+#    see https://cygwin.com/cygwin-ug-net/using.html#mount-table
+
+C:/cross/aarch64-openmp-elf                    /cygdrive/c              cygdrive binary,posix=1,user 0 0
+C:/cross/aarch64-openmp-elf/aarch64-openmp-elf /usr/aarch64-openmp-elf  none     binary,posix=1,user 0 0
+C:/cross/aarch64-openmp-elf/bin                /usr/bin                 none     binary,posix=1,user 0 0
+C:/cross/aarch64-openmp-elf/etc                /usr/etc                 none     binary,posix=1,user 0 0
+C:/cross/aarch64-openmp-elf/include            /usr/include             none     binary,posix=1,user 0 0
+C:/cross/aarch64-openmp-elf/lib                /usr/lib                 none     binary,posix=1,user 0 0
+C:/cross/aarch64-openmp-elf/libexec            /usr/libexec             none     binary,posix=1,user 0 0
+C:/cross/aarch64-openmp-elf/share              /usr/share               none     binary,posix=1,user 0 0

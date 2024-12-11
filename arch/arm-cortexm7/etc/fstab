@@ -1,0 +1,14 @@
+# /etc/fstab
+#
+#    This file is read once by the first process in a Cygwin process tree.
+#    To pick up changes, restart all Cygwin processes.  For a description
+#    see https://cygwin.com/cygwin-ug-net/using.html#mount-table
+
+C:/cross/arm-cortexm7-eabi                   /cygdrive/c             cygdrive binary,posix=1,user 0 0
+C:/cross/arm-cortexm7-eabi/arm-cortexm7-eabi /usr/arm-cortexm7-eabi  none     binary,posix=1,user 0 0
+C:/cross/arm-cortexm7-eabi/bin               /usr/bin                none     binary,posix=1,user 0 0
+C:/cross/arm-cortexm7-eabi/etc               /usr/etc                none     binary,posix=1,user 0 0
+C:/cross/arm-cortexm7-eabi/include           /usr/include            none     binary,posix=1,user 0 0
+C:/cross/arm-cortexm7-eabi/lib               /usr/lib                none     binary,posix=1,user 0 0
+C:/cross/arm-cortexm7-eabi/libexec           /usr/libexec            none     binary,posix=1,user 0 0
+C:/cross/arm-cortexm7-eabi/share             /usr/share              none     binary,posix=1,user 0 0
