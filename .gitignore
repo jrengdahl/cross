@@ -32,3 +32,4 @@ include/
 /Dependencies_x64_Release
 /openocd-0.12.0
 /dist
+/LLVM-13.0.0
