@@ -1,0 +1,42 @@
+This project is a derivative work of, and is built using, multiple free
+software components, each under its own license. By distributing this
+project, you agree to comply with the terms of these licenses. The end
+result is a combination of components covered by both the GNU General
+Public License (GPL) and the GNU Lesser General Public License (LGPL).
+
+Important: This file provides a summary. To comply fully, you must read
+and adhere to each component’s license. Full license texts are included
+in this directory.
+
+The following two components are distributed at https://github.com/jrengdahl/cross: 
+
+.config: derived from Crosstool-ng components
+    GNU General Public License version 2 (or later)
+
+build.sh: GPLv2
+
+The toolchain must be build by the version of crostool-ng found at:
+https://github.com/crosstool-ng
+
+
+The toolchain produced by the above files consist of binaries, libraries,
+and include files which are covered by GPL3 and LGPL3.
+
+The build.sh script copies two files from the Cygwin distro on the host
+machine into the generated toolchain.
+
+libwinpthread-1.dll: LGPLv3.
+omp.h: LGPLv3.
+
+Releases consisting of the toolchain binaries plus the two copied files can
+be found at https://github.com/jrengdahl/cross/releases.
+
+
+The Cygwin project can be found at https://www.cygwin.com. That website contains
+the licensing information and source files for Cygwin.
+
+The Crosstool-ng project can be found at https://crosstool-ng.github.io. The
+githib website for this project is at https://github.com/crosstool-ng/crosstool-ng.
+
+Crosstool-ng contains scripts to download many and various open source packages.
+Each package contains its own licensing information.

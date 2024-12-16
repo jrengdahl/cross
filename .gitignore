@@ -33,3 +33,15 @@ include/
 /openocd-0.12.0
 /dist
 /LLVM-13.0.0
+/arch/aarch64/.config.before-olddefconfig
+/arch/aarch64/.config.before-upgrade
+/arch/arm-cortexm33/.config.before-olddefconfig
+/arch/arm-cortexm33/.config.before-upgrade
+/arch/arm-cortexm7/.config.before-olddefconfig
+/arch/arm-cortexm7/.config.before-upgrade
+/arch/arm-cortexm0p/.config.before-olddefconfig
+/arch/arm-cortexm0p/.config.before-upgrade
+/arch/arm-cortexm4/.config.before-olddefconfig
+/arch/arm-cortexm4/.config.before-upgrade
+/arch/arm-uboot/.config.before-olddefconfig
+/arch/arm-uboot/.config.before-upgrade
