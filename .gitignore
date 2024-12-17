@@ -45,3 +45,4 @@ include/
 /arch/arm-cortexm4/.config.before-upgrade
 /arch/arm-uboot/.config.before-olddefconfig
 /arch/arm-uboot/.config.before-upgrade
+/aarch64-openmp-elf-old
